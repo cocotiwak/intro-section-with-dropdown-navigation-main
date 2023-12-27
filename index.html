@@ -10,8 +10,22 @@
 		/>
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
 			#navigasi input:checked ~ menu {
 				transform: none;
+			}
+			#fitur:checked ~ #fitur-up {
+				transform: none;
+			}
+
+			#fitur:checked ~ #menu-dalam {
+				display: block;
+			}
+			#company:checked ~ #icon-company {
+				transform: none;
+			}
+			#company:checked ~ #menu-company {
+				display: block;
 			}
 		</style>
 		<link rel="stylesheet" href="./css/styles.css" />
@@ -41,14 +55,76 @@
 								alt="icon-menu"
 								class="md:hidden absolute top-0 right-2 mt-5"
 						/></label>
-						<div class="bg-Almost-White w-[90] min-h-screen">
+						<div
+							class="bg-Almost-White w-[90] min-h-screen text-Medium-Gray p-5"
+						>
 							<ul class="mt-14">
-								<li>Features</li>
-								<li>Company</li>
+								<li>
+									<input type="checkbox" id="fitur" class="hidden" /><label
+										for="fitur"
+									>
+										Features&nbsp;</label
+									>
+									<span
+										class="inline-block rotate-180 transform duration-300"
+										id="fitur-up"
+										><img
+											src="./images/icon-arrow-down.svg"
+											alt="icon-arrow-up"
+											class="icon-up"
+									/></span>
+
+									<ul class="px-5 hidden" id="menu-dalam">
+										<li>
+											<span class="inline-block"
+												><img src="./images/icon-todo.svg" alt="" /></span
+											>&nbsp;Todo List
+										</li>
+										<li>
+											<span class="inline-block"
+												><img src="./images/icon-calendar.svg" alt="" /></span
+											>&nbsp;Calendar
+										</li>
+										<li>
+											<span class="inline-block"
+												><img src="./images/icon-reminders.svg" alt="" /></span
+											>&nbsp;Reminders
+										</li>
+										<li>
+											<span class="inline-block"
+												><img src="./images/icon-planning.svg" alt="" /></span
+											>&nbsp;Planning
+										</li>
+									</ul>
+								</li>
+								<li>
+									<input type="checkbox" id="company" class="hidden" /><label
+										for="company"
+									>
+										Company&nbsp;
+									</label>
+									<span
+										class="inline-block rotate-180 transform duration-300"
+										id="icon-company"
+										><img src="./images/icon-arrow-down.svg" alt=""
+									/></span>
+									<ul class="px-5 hidden" id="menu-company">
+										<li>History</li>
+										<li>Our Team</li>
+										<li>Blog</li>
+									</ul>
+								</li>
 								<li>Careers</li>
 								<li>About</li>
 							</ul>
-							<p>Login</p>
+							<p class="mt-10 text-center">Login</p>
+							<div class="flex justify-center w-[100%] mt-5">
+								<button
+									class="p-2 rounded-xl text-center border-2 border-Medium-Gray w-[90%]"
+								>
+									Register
+								</button>
+							</div>
 						</div>
 					</menu>
 				</nav>
@@ -78,7 +154,7 @@
 					</div>
 				</div>
 			</main>
-			<div class="attribution text-cente">
+			<div class="attribution text-cente mt-[100px] text-center text-[10px]">
 				Challenge by
 				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 					>Frontend Mentor</a
