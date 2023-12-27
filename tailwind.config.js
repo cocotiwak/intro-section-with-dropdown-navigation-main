@@ -12,7 +12,8 @@ module.exports = {
       colors:{
         'Almost-White': 'hsl(0, 0%, 98%)',
         'Medium-Gray': 'hsl(0, 0%, 41%)',
-        'Almost-Black': 'hsl(0, 0%, 8%)'
+        'Almost-Black': 'hsl(0, 0%, 8%)',
+        'Gray-transparent': 'hsla(0, 0%, 41%,0.5)',
       },
       fontSize: {
         basis : ['18px','24px']
