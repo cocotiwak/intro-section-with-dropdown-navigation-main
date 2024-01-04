@@ -31,16 +31,28 @@
 			#company:checked ~ #menu-company {
 				display: block;
 			}
+			#company-href:hover ~ #menu-company-md {
+				display: block;
+			}
 			#company-md:checked ~ #menu-company-md {
 				display: block;
 			}
 			#fitur-md:checked ~ #menu-fitur-md {
 				display: block;
 			}
+			#fitur-href:hover ~ #menu-fitur-md {
+				display: block;
+			}
 			#fitur-md:checked ~ #fitur-md-up {
 				transform: none;
 			}
+			#fitur-href:hover ~ #fitur-md-up {
+				transform: none;
+			}
 			#company-md:checked ~ #company-md-up {
+				transform: none;
+			}
+			#company-href:hover ~ #company-md-up {
 				transform: none;
 			}
 		</style>
@@ -60,6 +72,7 @@
 								<input type="checkbox" id="fitur-md" class="hidden" /><a
 									href="#"
 									onclick="document.getElementById('fitur-md').click(); return false;"
+									id="fitur-href"
 									>Features&nbsp;</a
 								><span
 									class="inline-block rotate-180 transform duration-300"
@@ -99,6 +112,7 @@
 								<input type="checkbox" id="company-md" class="hidden" /><a
 									href="#"
 									onclick="document.getElementById('company-md').click(); return false;"
+									id="company-href"
 									>Company&nbsp;</a
 								><span
 									class="inline-block rotate-180 transform duration-300"
