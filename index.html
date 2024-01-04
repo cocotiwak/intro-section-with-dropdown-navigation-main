@@ -31,6 +31,18 @@
 			#company:checked ~ #menu-company {
 				display: block;
 			}
+			#company-md:checked ~ #menu-company-md {
+				display: block;
+			}
+			#fitur-md:checked ~ #menu-fitur-md {
+				display: block;
+			}
+			#fitur-md:checked ~ #fitur-md-up {
+				transform: none;
+			}
+			#company-md:checked ~ #company-md-up {
+				transform: none;
+			}
 		</style>
 		<link rel="stylesheet" href="./css/styles.css" />
 		<title>Intro section with dropdown navigation</title>
@@ -45,18 +57,65 @@
 					<div class="hidden md:flex md:justify-between items-baseline">
 						<ul class="flex justify-between">
 							<li class="px-5">
-								<input type="checkbox" id="fitur-md" /><a
+								<input type="checkbox" id="fitur-md" class="hidden" /><a
 									href="#"
 									onclick="document.getElementById('fitur-md').click(); return false;"
-									>Features</a
+									>Features&nbsp;</a
+								><span
+									class="inline-block rotate-180 transform duration-300"
+									id="fitur-md-up"
+									><img
+										src="./images/icon-arrow-down.svg"
+										alt="icon-arrow-up"
+										class="icon-up"
+								/></span>
+								<ul
+									class="py-3 px-5 border-2 rounded-xl shadow-xl absolute hidden"
+									id="menu-fitur-md"
 								>
+									<li class="py-2">
+										<span class="inline-block"
+											><img src="./images/icon-todo.svg" alt="" /></span
+										>&nbsp;Todo List
+									</li>
+									<li class="py-2">
+										<span class="inline-block"
+											><img src="./images/icon-calendar.svg" alt="" /></span
+										>&nbsp;Calendar
+									</li>
+									<li class="py-2">
+										<span class="inline-block"
+											><img src="./images/icon-reminders.svg" alt="" /></span
+										>&nbsp;Reminders
+									</li>
+									<li class="py-2">
+										<span class="inline-block"
+											><img src="./images/icon-planning.svg" alt="" /></span
+										>&nbsp;Planning
+									</li>
+								</ul>
 							</li>
 							<li class="px-5">
-								<input type="checkbox" id="company-md" /><a
+								<input type="checkbox" id="company-md" class="hidden" /><a
 									href="#"
 									onclick="document.getElementById('company-md').click(); return false;"
-									>Company</a
+									>Company&nbsp;</a
+								><span
+									class="inline-block rotate-180 transform duration-300"
+									id="company-md-up"
+									><img
+										src="./images/icon-arrow-down.svg"
+										alt="icon-arrow-up"
+										class="icon-up"
+								/></span>
+								<ul
+									class="py-3 px-5 border-2 rounded-xl shadow-xl absolute hidden"
+									id="menu-company-md"
 								>
+									<li class="py-2">History</li>
+									<li class="py-2">Our Team</li>
+									<li class="py-2">Blog</li>
+								</ul>
 							</li>
 							<li class="px-5">Careers</li>
 							<li class="px-5">About</li>
